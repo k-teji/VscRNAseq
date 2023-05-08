@@ -4,7 +4,7 @@
 
 The VscRNAseq is a cellular deconvolution with cell-type specific weighting factors, resulting in cellular ratio and gene expression patterns.
 
-### Require packages
+### Package Requirement
 
 You require the below packages for processing VscRNAseq.
 
