@@ -64,16 +64,13 @@ source('deconvolution_core_v2-1.R')
 
 ``` r
 ## Heart health WTs in i-organs atlas
-woRNAseq <- data.table::fread('sample_data/whole-organ_RNAseq_Heart.csv',
-                              header = T, stringsAsFactors = F, check.names = F)
-                              
+load('data/woRNAseq.rda')
+
 ## Heart SmartSeq2 data in Tabula Muris
-scRNAseq <- data.table::fread('sample_data/Heart_scRNAseq_count_mtx.csv',
-                              header = T, stringsAsFactors = F, check.names = F)
+load('data/scRNAseq.rda')
 
 ## gene converteing table from old to new names for mouse
-gene_converter <- read.csv('id_master_list.csv',
-                           header = T, stringsAsFactors = F, check.names = F)
+load('data/gene_converter.rda')
 
 ## Unify gene names between whole-organ and single cell RNA-seq
 unify_result <- unify_gene_names(woRNAseq = woRNAseq, scRNAseq = scRNAseq,
@@ -86,12 +83,10 @@ unify_result <- unify_gene_names(woRNAseq = woRNAseq, scRNAseq = scRNAseq,
 
 ``` r
 ## scRNAseq annotation
-scRNAseq_annotation <- data.table::fread('Heart_scRNAseq_annotation.csv',
-                                         header = T, stringsAsFactors = F, check.names = F)
+load('scRNAseq_annotation.rda')
 
 ## Cellular reference ratio
-celltype_ref_ratio <- read.csv('Heart_celltype_ratio_new.csv',
-                               header = T, stringsAsFactors = F, check.names = F)
+load('celltype_ref_ratio.rda')
 
 ## Extract Signature genes
 sigG_result <- extract_signature_genes(scRNAseq_count = unify_result[['scRNAseq_normalised']], 
