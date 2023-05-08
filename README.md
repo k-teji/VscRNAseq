@@ -120,7 +120,7 @@ Weighting_factors_calculation(woRNAseq_data = unify_result[['woRNAseq_normalised
 
 ``` r
 WF_summary <- read.csv('xxx_WF_summry.csv', header = T, stringsAsFactors = F, check.names = F)
-WF_scRNAseq <- Add_WF_to_scRNAseq(scRNAseq_raw_count = unify_result[['scRNAseq_normalised]],
+WF_scRNAseq <- Add_WF_to_scRNAseq(scRNAseq_raw_count = unify_result[['scRNAseq_normalised']],
                                   WF_summary = WF_summary)
 ```
 
