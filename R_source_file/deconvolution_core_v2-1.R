@@ -93,7 +93,7 @@ VscRNAseq_deconvolute <- function(wscRNAseq_mean, wscRNAseq_var, reference_cellt
       target += std_normal_lpdf(y_error);
     }
   '
-  rstan_model <- rstan::stan_model(rstan_model_input)
+  rstan_model <- rstan::stan_model(model_code = rstan_model_input)
 
   ## make input data for stan sampling
   filter_wscRNAseq_mean <- wscRNAseq_mean %>%
