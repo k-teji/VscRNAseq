@@ -112,7 +112,7 @@ Weighting_factors_calculation(woRNAseq_data = unify_result[['woRNAseq_normalised
                              signature_genes = sigGenes,
                              celltype_reference_data = celltype_ref_ratio,
                              save_name = 'xxx',
-                             constraint_value = 0,
+                             constrain_value = 0,
                              sample_scale = 100L)
 ```
 
