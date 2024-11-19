@@ -1,5 +1,7 @@
 # VscRNAseq
 
+Citation: Tejima K, Kozawa S, Sato TN (2024) Cell type-specific weighting-factors to solve solid organs-specific limitations of single cell RNA-sequencing. PLoS Genet 20(11): e1011436. https://doi.org/10.1371/journal.pgen.1011436
+
 # 'Virtual single-cell RNA-seq'
 
 The VscRNAseq is a cellular deconvolution with cell-type specific weighting factors, resulting in cellular ratio and gene expression patterns.
